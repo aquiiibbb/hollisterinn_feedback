@@ -87,7 +87,7 @@
 
 /* ── Card Body ── */
 .card-body {
-    background-image: url('./assets/bg.gif');
+  background-image: url('./assets/bg.gif');
     padding: 32px 28px;
     display: flex;
     flex-direction: column;
@@ -244,6 +244,7 @@
     padding: 40px;
 }
 
+
 /* ── Card Footer (Same as Header) ── */
 .card-footer {
     background: #6A1B2A;
@@ -358,129 +359,31 @@
 
 /* ── Mobile Responsiveness ── */
 @media (max-width: 768px) {
-    .review-homepage {
-        padding: 20px;
-    }
-
-    .review-card {
-        max-width: 100%;
-        border-radius: 18px;
-    }
-
     .card-top {
-        padding: 24px 20px 16px;
+        padding: 28px 24px 22px;
     }
 
-    .logo-wrap {
-        width: 180px;
-        height: 80px;
-        border-radius: 16px;
-        margin-bottom: 16px;
-    }
-
-    .logo-image {
-        width: 190px;
-        height: 77px;
-    }
-
-    .hotel-name {
-        font-size: 18px;
-        margin-bottom: 6px;
-    }
-
-    .hotel-tagline {
-        font-size: 11px;
+    .card-footer {
+        padding: 28px 24px 22px;
     }
 
     .card-body {
-        padding: 28px 20px;
-        gap: 25px;
-    }
-
-    .section-label {
-        font-size: 10px;
-        margin-bottom: 14px;
+        padding: 24px 20px;
     }
 
     .platform-btn {
         width: 55px;
         height: 55px;
-        padding: 45px;
-        border-radius: 14px;
     }
 
     .platform-icon-wrap {
         width: 85px;
         height: 85px;
-        border-radius: 10px;
     }
 
     .platform-icon-wrap svg {
         width: 80px;
         height: 80px;
-    }
-
-    .platform-text strong {
-        font-size: 13px;
-    }
-
-    .platform-text span {
-        font-size: 11px;
-    }
-
-    .divider {
-        gap: 10px;
-        margin-bottom: 24px;
-    }
-
-    .divider-text {
-        font-size: 10px;
-    }
-
-    .qr-code-image {
-        width: 220px;
-        height: 220px;
-        padding: 35px;
-        transform: scale(1.5);
-    }
-
-    .qr-container {
-        border-radius: 16px;
-    }
-
-    .card-footer {
-        padding: 24px 20px 20px;
-    }
-
-    .footer-logo-wrap {
-        width: 180px;
-        height: 80px;
-        border-radius: 16px;
-        margin-bottom: 16px;
-    }
-
-    .footer-hotel-name {
-        font-size: 18px;
-        margin: -18px 0 6px;
-    }
-
-    .footer-hotel-tagline {
-        font-size: 11px;
-    }
-
-    .camera-feed {
-        height: 280px;
-        border-radius: 14px;
-    }
-
-    .scanner-controls {
-        gap: 12px;
-    }
-
-    .scanner-btn {
-        padding: 11px 20px;
-        font-size: 15px;
-        border-radius: 10px;
     }
 }
 
@@ -490,308 +393,45 @@
     }
 
     .review-card {
-        border-radius: 16px;
-    }
-
-    .card-top {
-        padding: 20px 16px 14px;
-    }
-
-    .logo-wrap {
-        width: 160px;
-        height: 70px;
-        border-radius: 14px;
-        margin-bottom: 14px;
-    }
-
-    .logo-image {
-        width: 170px;
-        height: 67px;
-    }
-
-    .hotel-name {
-        font-size: 16px;
-        margin-bottom: 4px;
-    }
-
-    .hotel-tagline {
-        font-size: 10px;
-    }
-
-    .card-body {
-        padding: 24px 16px;
-        gap: 22px;
-    }
-
-    .section-label {
-        font-size: 9px;
-        margin-bottom: 12px;
+        border-radius: 22px;
     }
 
     .platform-icons {
         grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .platform-btn {
-        width: 50px;
-        height: 50px;
-        padding: 40px;
-        border-radius: 12px;
-    }
-
-    .platform-icon-wrap {
-        width: 75px;
-        height: 75px;
-        border-radius: 8px;
-    }
-
-    .platform-icon-wrap svg {
-        width: 70px;
-        height: 70px;
-    }
-
-    .platform-text strong {
-        font-size: 12px;
-    }
-
-    .platform-text span {
-        font-size: 10px;
-    }
-
-    .divider {
-        gap: 8px;
-        margin-bottom: 20px;
-    }
-
-    .divider-text {
-        font-size: 9px;
-    }
-
-    .qr-code-image {
-        width: 200px;
-        height: 200px;
-        padding: 30px;
-        transform: scale(1.4);
-    }
-
-    .qr-container {
-        border-radius: 14px;
-    }
-
-    .card-footer {
-        padding: 20px 16px 18px;
-    }
-
-    .footer-logo-wrap {
-        width: 160px;
-        height: 70px;
-        border-radius: 14px;
-        margin-bottom: 14px;
-    }
-
-    .footer-hotel-name {
-        font-size: 16px;
-        margin: -16px 0 4px;
-    }
-
-    .footer-hotel-tagline {
-        font-size: 10px;
-    }
-
-    .camera-feed {
-        max-width: 100%;
-        height: 250px;
-        border-radius: 12px;
-    }
-
-    .scanner-controls {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-    }
-
-    .scanner-btn {
-        width: 100%;
-        padding: 14px 20px;
-        font-size: 14px;
-        border-radius: 8px;
-    }
-}
-
-@media (max-width: 360px) {
-    .review-homepage {
-        padding: 12px;
-    }
-
-    .card-top {
-        padding: 18px 14px 12px;
-    }
-
-    .logo-wrap {
-        width: 140px;
-        height: 60px;
-        border-radius: 12px;
-        margin-bottom: 12px;
-    }
-
-    .logo-image {
-        width: 150px;
-        height: 57px;
-    }
-
-    .hotel-name {
-        font-size: 15px;
-    }
-
-    .hotel-tagline {
-        font-size: 9px;
-    }
-
-    .card-body {
-        padding: 20px 14px;
-        gap: 20px;
-    }
-
-    .platform-btn {
-        width: 45px;
-        height: 45px;
-        padding: 35px;
-    }
-
-    .platform-icon-wrap {
-        width: 65px;
-        height: 65px;
-    }
-
-    .platform-icon-wrap svg {
-        width: 60px;
-        height: 60px;
     }
 
     .qr-code-image {
         width: 180px;
         height: 180px;
-        padding: 25px;
-        transform: scale(1.3);
-    }
-
-    .card-footer {
-        padding: 18px 14px 16px;
-    }
-
-    .footer-logo-wrap {
-        width: 140px;
-        height: 60px;
-        border-radius: 12px;
-        margin-bottom: 12px;
-    }
-
-    .footer-hotel-name {
-        font-size: 15px;
-        margin: -14px 0 2px;
-    }
-
-    .footer-hotel-tagline {
-        font-size: 9px;
     }
 
     .camera-feed {
-        height: 220px;
+        max-width: 100%;
+        height: 250px;
+    }
+
+    .scanner-controls {
+        flex-direction: column;
+        width: 100%;
     }
 
     .scanner-btn {
-        padding: 12px 16px;
-        font-size: 13px;
+        width: 100%;
+        padding: 14px 20px;
     }
-}
 
-/* Touch improvements for mobile */
-@media (hover: none) and (pointer: coarse) {
     .platform-btn {
-        padding: 12px;
-    }
-    
-    .qr-interaction:hover {
-        transform: none;
-    }
-    
-    .platform-btn:hover {
-        transform: none;
-        background: var(--off-white);
-        border-color: var(--gray-line);
-        box-shadow: none;
-    }
-    
-    .platform-btn:active {
-        background: var(--blue-pale);
-        border-color: var(--blue-soft);
-        transform: scale(0.98);
-    }
-    
-    .qr-interaction:hover .qr-container {
-        background: transparent;
-        border-color: #6A1B2A;
-        box-shadow: none;
-    }
-    
-    .scanner-btn:hover {
-        transform: none;
-    }
-    
-    .scanner-btn:active {
-        transform: scale(0.98);
-    }
-}
-
-/* Landscape orientation on mobile */
-@media (max-height: 600px) and (orientation: landscape) {
-    .review-homepage {
-        padding: 16px;
-    }
-    
-    .card-top, .card-footer {
-        padding: 16px 20px 12px;
-    }
-    
-    .logo-wrap, .footer-logo-wrap {
-        width: 120px;
+        width: 50px;
         height: 50px;
-        margin-bottom: 10px;
     }
-    
-    .logo-image {
-        width: 130px;
-        height: 47px;
+
+    .platform-icon-wrap {
+        width: 75px;
+        height: 75px;
     }
-    
-    .hotel-name, .footer-hotel-name {
-        font-size: 14px;
-        margin-bottom: 2px;
-    }
-    
-    .hotel-tagline, .footer-hotel-tagline {
-        font-size: 8px;
-    }
-    
-    .card-body {
-        padding: 20px 16px;
-        gap: 18px;
-    }
-    
-    .qr-code-image {
-        width: 160px;
-        height: 160px;
-        padding: 20px;
-        transform: scale(1.2);
-    }
-    
-    .camera-scanner {
-        padding: 16px;
-        gap: 16px;
-    }
-    
-    .camera-feed {
-        height: 200px;
+
+    .platform-icon-wrap svg {
+        width: 70px;
+        height: 70px;
     }
 }
