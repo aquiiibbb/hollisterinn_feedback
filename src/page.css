@@ -1,270 +1,366 @@
-* { 
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
+/* page.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .container {
-  background-image: url('./assets/bg.gif');
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .card {
   background: white;
   border-radius: 20px;
-  padding: 40px 35px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px;
   text-align: center;
-  max-width: 480px;
-  width: 100%;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
 }
 
-.hotel-icon { 
-  font-size: 3rem; 
-  margin-bottom: 12px; 
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.hotel-icon {
+  margin-bottom: 20px;
 }
 
 .hotel-icon img {
-  width: 150px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   object-fit: cover;
-  border-radius: 1px;
+  border: 3px solid #f0f0f0;
 }
 
-h1 { 
-  font-size: 1.8rem; 
-  color: #1a1a2e; 
-  margin-bottom: 8px; 
+h1 {
+  color: #333;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-h2 {
-  font-size: 1.8rem; 
-  color: #1a1a2e; 
-  margin-bottom: 8px;
-}
-
-.subtitle { 
-  color: #999; 
-  margin-bottom: 25px; 
-  font-size: 0.95rem; 
-}
-
-/* User Details Section */
-.user-details {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.subtitle {
+  color: #666;
+  font-size: 16px;
   margin-bottom: 30px;
-  text-align: left;
-}
-
-.input-field {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-family: inherit;
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.input-field:focus {
-  border-color: #6A1B2A;
-  box-shadow: 0 0 0 2px rgba(106, 27, 42, 0.1);
-}
-
-.input-field::placeholder {
-  color: #999;
+  line-height: 1.5;
 }
 
 /* Rating Section */
 .rating-section {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .rating-text {
   color: #333;
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .stars {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .star {
   background: none;
   border: none;
-  font-size: 3.6rem;
+  font-size: 40px;
+  color: #ddd;
   cursor: pointer;
-  color: #c1b8b8;
-  transition: color 0.15s, transform 0.15s;
-  filter: none; /* Remove any shadow effects */
+  transition: all 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
 }
 
-.star.active { 
-  color: #f5a623; 
-  filter: none; /* Remove shadow when active */
+.star:hover {
+  transform: scale(1.1);
+  color: #ffd700;
 }
 
-.star:hover:not(.fixed) { 
-  transform: scale(1.15); 
-  color: #f5a623;
-  filter: none; /* Remove shadow on hover */
+.star.active {
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
 .star.fixed {
-  cursor: default;
-  pointer-events: none;
-  filter: none; /* Remove shadow when fixed */
+  cursor: not-allowed;
 }
 
-.star.fixed:hover {
-  transform: none;
+.rating-label {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #333;
 }
 
-/* Rating Display Section - For selected stars only */
+.redirect-message {
+  color: #667eea;
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+/* User Details Section */
+.user-details {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input-field::placeholder {
+  color: #999;
+}
+
+/* Rating Display */
 .rating-display {
-  margin: 20px 0;
   text-align: center;
+  margin: 25px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
 }
 
 .selected-stars {
-  display: flex;
-  justify-content: center;
-  gap: 4px;
   margin: 10px 0;
 }
 
 .star-selected {
-  font-size: 3rem;
-  color: #f5a623;
-  filter: none; /* No shadow effects */
-  text-shadow: none; /* Remove any text shadow */
-}
-
-.rating-label {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #991c34;
-  margin-bottom: 15px;
-}
-
-.redirect-message {
-  color: #4caf50;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-top: 10px;
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.6; }
-  100% { opacity: 1; }
+  color: #ffd700;
+  font-size: 24px;
+  margin: 0 2px;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
 }
 
 /* Feedback Form */
-.feedback-form { 
-  margin-top: 25px; 
-  text-align: left; 
+.feedback-form {
+  margin: 25px 0;
 }
 
-.feedback-form h3 { 
-  text-align: center; 
-  margin-bottom: 15px; 
-  color: #333; 
-  font-size: 1.1rem; 
+.feedback-form h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-textarea {
+.feedback-form textarea {
   width: 100%;
-  padding: 12px 14px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  resize: vertical;
+  padding: 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  font-size: 16px;
   font-family: inherit;
+  resize: vertical;
+  min-height: 120px;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.feedback-form textarea:focus {
   outline: none;
-  transition: border-color 0.2s;
-  min-height: 100px;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
-textarea:focus { 
-  border-color: #6A1B2A; 
-  box-shadow: 0 0 0 2px rgba(106, 27, 42, 0.1);
+.feedback-form textarea::placeholder {
+  color: #999;
 }
 
+/* Button */
 .btn {
-  margin-top: 15px;
   width: 100%;
-  background: linear-gradient(135deg, #6A1B2A, #8b2f40);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 16px;
   font-weight: 600;
-  transition: all 0.2s;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
-.btn:hover { 
-  opacity: 0.9;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(106, 27, 42, 0.3);
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
 }
 
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Success State */
 .checkmark {
-  font-size: 2.5rem;
-  color: #4caf50;
-  background: #e8f5e9;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 16px;
+  font-size: 60px;
+  color: #28a745;
+  margin-bottom: 20px;
   animation: checkmarkPop 0.6s ease-out;
 }
 
 @keyframes checkmarkPop {
-  0% { transform: scale(0); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
-/* Mobile responsiveness */
-@media (max-width: 480px) {
-  .card {
-    padding: 25px 20px;
-    margin: 10px;
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
   }
   
-  h1, h2 {
-    font-size: 1.5rem;
+  .container {
+    max-width: 100%;
+  }
+  
+  .card {
+    padding: 30px 20px;
+    border-radius: 16px;
+    margin: 10px 0;
+  }
+  
+  .hotel-icon img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .subtitle {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .rating-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .stars {
+    gap: 6px;
+    margin-bottom: 12px;
   }
   
   .star {
-    font-size: 2.8rem;
+    font-size: 36px;
+    padding: 3px;
+  }
+  
+  .rating-label {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  
+  .redirect-message {
+    font-size: 15px;
+    margin-top: 12px;
+  }
+  
+  .input-field {
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .rating-display {
+    padding: 15px;
+    margin: 20px 0;
   }
   
   .star-selected {
-    font-size: 2.5rem;
+    font-size: 22px;
   }
   
-  .hotel-icon {
-    font-size: 2.5rem;
+  .feedback-form h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .feedback-form textarea {
+    padding: 12px;
+    font-size: 16px;
+    min-height: 100px;
+  }
+  
+  .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  
+  .checkmark {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 25px 15px;
+    border-radius: 12px;
   }
   
   .hotel-icon img {
@@ -272,30 +368,199 @@ textarea:focus {
     height: 60px;
   }
   
-  .input-field, textarea {
-    font-size: 0.85rem;
-    padding: 10px 12px;
+  h1 {
+    font-size: 22px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+  }
+  
+  .rating-text {
+    font-size: 15px;
   }
   
   .stars {
     gap: 4px;
   }
   
-  .selected-stars {
-    gap: 2px;
-  }
-}
-
-@media (max-width: 360px) {
   .star {
-    font-size: 2.4rem;
+    font-size: 32px;
+  }
+  
+  .rating-label {
+    font-size: 15px;
+  }
+  
+  .input-field {
+    padding: 10px;
+    font-size: 15px;
+  }
+  
+  .rating-display {
+    padding: 12px;
   }
   
   .star-selected {
-    font-size: 2.2rem;
+    font-size: 20px;
+  }
+  
+  .feedback-form h3 {
+    font-size: 15px;
+  }
+  
+  .feedback-form textarea {
+    padding: 10px;
+    font-size: 15px;
+    min-height: 90px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+  
+  .checkmark {
+    font-size: 45px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  body {
+    padding: 10px;
+  }
+  
+  .card {
+    padding: 20px 12px;
+  }
+  
+  .hotel-icon img {
+    width: 55px;
+    height: 55px;
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+  
+  .star {
+    font-size: 28px;
+  }
+  
+  .input-field, .feedback-form textarea {
+    font-size: 14px;
+  }
+  
+  .btn {
+    font-size: 14px;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  body {
+    padding: 10px;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .hotel-icon img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .subtitle {
+    margin-bottom: 15px;
+  }
+  
+  .rating-text {
+    margin-bottom: 10px;
   }
   
   .stars {
-    gap: 2px;
+    margin-bottom: 8px;
+  }
+  
+  .star {
+    font-size: 30px;
+  }
+  
+  .rating-display {
+    padding: 10px;
+    margin: 15px 0;
+  }
+  
+  .feedback-form textarea {
+    min-height: 80px;
+  }
+}
+
+/* Touch improvements */
+@media (hover: none) and (pointer: coarse) {
+  .star {
+    padding: 8px;
+  }
+  
+  .btn {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+  
+  .input-field, .feedback-form textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hotel-icon img {
+    border-width: 2px;
+  }
+  
+  .card::before {
+    height: 3px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  }
+  
+  .card {
+    background: #1a202c;
+    color: #e2e8f0;
+  }
+  
+  h1, .rating-text, .rating-label, .feedback-form h3 {
+    color: #e2e8f0;
+  }
+  
+  .subtitle {
+    color: #a0aec0;
+  }
+  
+  .input-field, .feedback-form textarea {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: #e2e8f0;
+  }
+  
+  .input-field::placeholder, .feedback-form textarea::placeholder {
+    color: #718096;
+  }
+  
+  .rating-display {
+    background: #2d3748;
+    border-left-color: #667eea;
   }
 }
