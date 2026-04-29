@@ -36,14 +36,9 @@ function Page() {
 
     if (r >= 4) {
       // High rating (4-5 stars) - direct redirect to Google Reviews
-      alert("");
       setTimeout(() => {
-        window.open("https://g.page/r/CZuCqInf65YPEBM/review", "_blank");
-        // Reset form after redirect
-        setTimeout(() => {
-          resetForm();
-        }, 100);
-      }, 100);
+        window.location.href = "https://g.page/r/CZuCqInf65YPEBM/review";
+      }, 500);
     } else if (r <= 3) {
       // Low rating (1-3 stars) - show user form
       setShowUserForm(true);
@@ -157,7 +152,7 @@ function Page() {
             </div>
             {rating > 0 && <p className="rating-label">{labels[rating]}</p>}
             {rating >= 4 && (
-              <p className="redirect-message"></p>
+              <p className="redirect-message">Redirecting to Google Reviews...</p>
             )}
           </div>
         )}
