@@ -128,6 +128,7 @@ export default function ReviewHomePage() {
                 <div className="card-footer">
                     <h2 className="footer-hotel-name">Hollister Inn</h2>
                     <p className="footer-hotel-tagline">152 San Felipe Road, Hollister, CA-95023</p>
+                    <p className="footer-hotel-tagline"><span style={{color:"white"}}>📞</span> (831) 637-1641</p>
                 </div>
             </div>
         </div>
